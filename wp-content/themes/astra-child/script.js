@@ -13,8 +13,7 @@ jQuery(document).ready(function($){
     })
     jQuery("#option_type").on("change",function(){
         var option_val = jQuery(this).val();
-        if(option_val!= 0 ){
-            if(option_val == "pickup"){
+        if(option_val!= 0 && option_val == "pickup"){
                 jQuery("#pickup_form").css("display","block");
             }else{
                 jQuery("#pickup_form").css("display","none");
@@ -22,8 +21,8 @@ jQuery(document).ready(function($){
                 jQuery(this).focus();
                 return; 
             }
-        }
     })
+    
     jQuery("#plan_submit").on("click", function(e){
         e.preventDefault();
         var formdata = jQuery("#subscribe_form").serializeArray();
